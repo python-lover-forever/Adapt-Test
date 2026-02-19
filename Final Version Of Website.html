@@ -8,7 +8,7 @@
   <!--
   Embed snippet:
   <iframe src="https://your-domain.com/index.html"
-          width="100%" height="950"
+          width="100%" height="1100"
           style="border:0;border-radius:16px;overflow:hidden;"
           loading="lazy"></iframe>
   -->
@@ -19,18 +19,23 @@
 
   <style>
     :root{
-      --bg0:#06102a;
-      --bg1:#071a3d;
-      --card:#0b2a5a;
-      --card2:#0e3270;
-      --line:rgba(150,195,255,.14);
-      --txt:#eaf2ff;
-      --muted:#b8d0ff;
-      --accent:#42A5F5;
-      --accent2:#1E88E5;
-      --ok:#66e3ff;
-      --shadow: 0 18px 45px rgba(0,0,0,.45);
-      --shadow2: 0 10px 30px rgba(0,0,0,.35);
+      /* Theme switched to LIGHT BLUE background */
+      --bg0:#eaf4ff;
+      --bg1:#d8ecff;
+
+      --card:rgba(255,255,255,.72);
+      --card2:rgba(255,255,255,.58);
+      --line:rgba(18,58,122,.16);
+
+      --txt:#0b1b3a;
+      --muted:#244a86;
+
+      --accent:#1E88E5;
+      --accent2:#42A5F5;
+      --ok:#0fbcd6;
+
+      --shadow: 0 18px 45px rgba(8,25,60,.18);
+      --shadow2: 0 10px 30px rgba(8,25,60,.14);
       --r:18px;
     }
 
@@ -40,9 +45,9 @@
       font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--txt);
       background:
-        radial-gradient(1200px 600px at 10% 10%, rgba(66,165,245,.18), transparent 55%),
-        radial-gradient(900px 500px at 85% 15%, rgba(102,227,255,.14), transparent 58%),
-        radial-gradient(900px 600px at 50% 105%, rgba(30,136,229,.12), transparent 55%),
+        radial-gradient(1100px 560px at 10% 10%, rgba(66,165,245,.22), transparent 55%),
+        radial-gradient(900px 520px at 85% 15%, rgba(15,188,214,.16), transparent 58%),
+        radial-gradient(900px 600px at 50% 105%, rgba(30,136,229,.14), transparent 55%),
         linear-gradient(180deg,var(--bg0),var(--bg1));
       overflow-x:hidden;
     }
@@ -54,10 +59,10 @@
     .bg-grid{
       position:fixed; inset:0;
       background-image:
-        linear-gradient(to right, rgba(150,195,255,.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(150,195,255,.06) 1px, transparent 1px);
+        linear-gradient(to right, rgba(30,136,229,.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30,136,229,.10) 1px, transparent 1px);
       background-size: 56px 56px;
-      mask-image: radial-gradient(circle at 50% 20%, rgba(0,0,0,.85), transparent 65%);
+      mask-image: radial-gradient(circle at 50% 20%, rgba(0,0,0,.65), transparent 65%);
       pointer-events:none;
       z-index:-1;
     }
@@ -66,7 +71,7 @@
     .nav{
       position:sticky; top:0; z-index:1000;
       backdrop-filter: blur(14px);
-      background: rgba(6,16,42,.72);
+      background: rgba(234,244,255,.72);
       border-bottom:1px solid var(--line);
     }
     .nav-inner{
@@ -77,19 +82,20 @@
     .brand{
       display:flex; align-items:center; gap:10px;
       font-weight:800; letter-spacing:1.5px;
+      color:#0a2a5a;
     }
     .brand-badge{
       width:36px; height:36px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(66,165,245,1), rgba(102,227,255,.95));
-      box-shadow: 0 12px 30px rgba(66,165,245,.25);
+      background: linear-gradient(135deg, rgba(30,136,229,1), rgba(15,188,214,.95));
+      box-shadow: 0 12px 30px rgba(30,136,229,.22);
       position:relative;
     }
     .brand-badge::after{
       content:"";
       position:absolute; inset:2px;
       border-radius:10px;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.35), transparent 55%);
-      border:1px solid rgba(255,255,255,.18);
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.50), transparent 55%);
+      border:1px solid rgba(255,255,255,.35);
     }
     .nav-links{
       display:flex; flex-wrap:wrap;
@@ -98,16 +104,16 @@
     }
     .nav-links a{
       font-size:13px;
-      color:rgba(234,242,255,.92);
+      color:rgba(11,27,58,.88);
       padding:8px 10px;
       border-radius:10px;
       border:1px solid transparent;
       transition:.25s;
     }
     .nav-links a:hover{
-      color:#fff;
-      border-color:rgba(66,165,245,.35);
-      background:rgba(66,165,245,.08);
+      color:#071a3d;
+      border-color:rgba(30,136,229,.26);
+      background:rgba(30,136,229,.08);
     }
 
     /* HERO */
@@ -120,8 +126,8 @@
       position:absolute; inset:-220px -120px auto -120px;
       height:520px;
       background:
-        radial-gradient(closest-side at 35% 45%, rgba(66,165,245,.28), transparent 70%),
-        radial-gradient(closest-side at 70% 30%, rgba(102,227,255,.18), transparent 72%);
+        radial-gradient(closest-side at 35% 45%, rgba(30,136,229,.26), transparent 70%),
+        radial-gradient(closest-side at 70% 30%, rgba(15,188,214,.18), transparent 72%);
       filter: blur(6px);
       z-index:-1;
       pointer-events:none;
@@ -140,8 +146,8 @@
       display:inline-flex; align-items:center; gap:10px;
       padding:8px 12px;
       border-radius:999px;
-      border:1px solid rgba(66,165,245,.35);
-      background: rgba(66,165,245,.08);
+      border:1px solid rgba(30,136,229,.22);
+      background: rgba(30,136,229,.08);
       color: var(--muted);
       font-size:13px;
       width:fit-content;
@@ -150,16 +156,17 @@
     .dot{
       width:8px; height:8px; border-radius:99px;
       background: var(--ok);
-      box-shadow: 0 0 18px rgba(102,227,255,.8);
+      box-shadow: 0 0 16px rgba(15,188,214,.45);
     }
     h1{
       font-size: clamp(34px, 4.2vw, 54px);
       line-height:1.05;
       letter-spacing:-.6px;
       margin-bottom:14px;
+      color:#071a3d;
     }
     .sub{
-      color: rgba(234,242,255,.86);
+      color: rgba(11,27,58,.86);
       font-size:16px;
       line-height:1.7;
       max-width: 62ch;
@@ -174,25 +181,27 @@
       border-radius: 14px;
       font-weight:700;
       font-size:14px;
-      border:1px solid rgba(66,165,245,.35);
+      border:1px solid rgba(30,136,229,.24);
       transition:.25s;
-      box-shadow: 0 10px 26px rgba(0,0,0,.18);
+      box-shadow: 0 10px 26px rgba(8,25,60,.10);
       user-select:none;
     }
     .btn-primary{
       background: linear-gradient(135deg, rgba(30,136,229,1), rgba(66,165,245,1));
-      border-color: rgba(102,227,255,.25);
+      border-color: rgba(15,188,214,.18);
+      color:#fff;
     }
-    .btn-primary:hover{ transform: translateY(-1px); filter: brightness(1.06); }
+    .btn-primary:hover{ transform: translateY(-1px); filter: brightness(1.05); }
     .btn-ghost{
-      background: rgba(234,242,255,.04);
+      background: rgba(255,255,255,.55);
+      color:#0b1b3a;
     }
-    .btn-ghost:hover{ background: rgba(66,165,245,.09); transform: translateY(-1px); }
+    .btn-ghost:hover{ background: rgba(30,136,229,.10); transform: translateY(-1px); }
 
     .hero-card{
       border-radius: var(--r);
-      background: linear-gradient(180deg, rgba(11,42,90,.76), rgba(9,32,72,.62));
-      border: 1px solid rgba(150,195,255,.18);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border: 1px solid rgba(18,58,122,.14);
       box-shadow: var(--shadow);
       padding:22px;
       position:relative;
@@ -202,7 +211,7 @@
       content:"";
       position:absolute; inset:-40px -40px auto auto;
       width:220px; height:220px;
-      background: radial-gradient(circle at 30% 30%, rgba(102,227,255,.28), transparent 65%);
+      background: radial-gradient(circle at 30% 30%, rgba(15,188,214,.20), transparent 65%);
       filter: blur(2px);
       pointer-events:none;
     }
@@ -214,22 +223,22 @@
     .stat{
       border-radius: 16px;
       padding:14px;
-      background: rgba(6,16,42,.38);
-      border:1px solid rgba(150,195,255,.16);
+      background: rgba(234,244,255,.65);
+      border:1px solid rgba(18,58,122,.12);
     }
     .stat b{
       display:block;
       font-size:18px;
       letter-spacing:.2px;
       margin-bottom:4px;
-      color:#fff;
+      color:#071a3d;
     }
-    .stat span{ font-size:12px; color: rgba(184,208,255,.95); line-height:1.4; display:block; }
+    .stat span{ font-size:12px; color: rgba(36,74,134,.95); line-height:1.4; display:block; }
 
     .small-note{
       margin-top:14px;
       font-size:12px;
-      color: rgba(184,208,255,.92);
+      color: rgba(36,74,134,.92);
       line-height:1.55;
     }
 
@@ -243,10 +252,10 @@
     .section-title h2{
       font-size: 28px;
       letter-spacing: -.3px;
-      color: #dfeaff;
+      color: #071a3d;
     }
     .section-title p{
-      color: rgba(184,208,255,.9);
+      color: rgba(36,74,134,.9);
       font-size: 13px;
       max-width: 52ch;
       line-height:1.55;
@@ -261,8 +270,8 @@
 
     .card{
       border-radius: var(--r);
-      background: linear-gradient(180deg, rgba(11,42,90,.72), rgba(9,32,72,.62));
-      border:1px solid rgba(150,195,255,.16);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border:1px solid rgba(18,58,122,.14);
       box-shadow: var(--shadow2);
       padding:18px;
       position:relative;
@@ -270,7 +279,7 @@
       transition:.25s;
       min-height: 140px;
     }
-    .card:hover{ transform: translateY(-4px); border-color: rgba(66,165,245,.35); }
+    .card:hover{ transform: translateY(-4px); border-color: rgba(30,136,229,.26); }
     .card h3{
       color: var(--accent);
       font-size: 16px;
@@ -278,7 +287,7 @@
       letter-spacing:.2px;
     }
     .card p{
-      color: rgba(234,242,255,.88);
+      color: rgba(11,27,58,.86);
       font-size: 13.2px;
       line-height: 1.7;
     }
@@ -286,9 +295,9 @@
       display:inline-flex;
       padding:6px 10px;
       border-radius:999px;
-      border:1px solid rgba(66,165,245,.3);
-      background: rgba(66,165,245,.08);
-      color: rgba(184,208,255,.95);
+      border:1px solid rgba(30,136,229,.22);
+      background: rgba(30,136,229,.08);
+      color: rgba(36,74,134,.95);
       font-size: 12px;
       margin-top: 12px;
       width: fit-content;
@@ -303,9 +312,10 @@
     @media (max-width: 900px){ .timeline{grid-template-columns:1fr;} }
     .item{
       border-radius: var(--r);
-      background: rgba(6,16,42,.35);
-      border:1px solid rgba(150,195,255,.14);
+      background: rgba(255,255,255,.55);
+      border:1px solid rgba(18,58,122,.12);
       padding:16px;
+      box-shadow: 0 10px 26px rgba(8,25,60,.08);
     }
     .item .top{
       display:flex; align-items:center; justify-content:space-between;
@@ -316,13 +326,13 @@
       font-size: 11px;
       padding:6px 10px;
       border-radius: 999px;
-      border:1px solid rgba(102,227,255,.25);
-      background: rgba(102,227,255,.08);
-      color: rgba(184,208,255,.98);
+      border:1px solid rgba(15,188,214,.22);
+      background: rgba(15,188,214,.08);
+      color: rgba(36,74,134,.98);
       white-space:nowrap;
     }
-    .item h4{ font-size:15px; color:#fff; }
-    .item p{ font-size:13px; color: rgba(234,242,255,.86); line-height:1.65; }
+    .item h4{ font-size:15px; color:#071a3d; }
+    .item p{ font-size:13px; color: rgba(11,27,58,.86); line-height:1.65; }
 
     /* incubation */
     .two-col{
@@ -341,29 +351,86 @@
     .bullets li{
       padding:12px 14px;
       border-radius:16px;
-      border:1px solid rgba(150,195,255,.14);
-      background: rgba(6,16,42,.35);
-      color: rgba(234,242,255,.9);
+      border:1px solid rgba(18,58,122,.12);
+      background: rgba(255,255,255,.55);
+      color: rgba(11,27,58,.88);
       font-size: 13px;
       line-height:1.55;
       position:relative;
       padding-left:40px;
+      box-shadow: 0 10px 26px rgba(8,25,60,.08);
     }
     .bullets li::before{
       content:"";
       position:absolute;
       left:14px; top:14px;
       width:14px; height:14px; border-radius:999px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%), linear-gradient(135deg, var(--accent2), var(--ok));
-      box-shadow: 0 0 16px rgba(102,227,255,.35);
-      border:1px solid rgba(255,255,255,.18);
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), transparent 55%),
+                  linear-gradient(135deg, var(--accent), var(--ok));
+      box-shadow: 0 0 14px rgba(15,188,214,.22);
+      border:1px solid rgba(255,255,255,.30);
+    }
+
+    /* TEAM */
+    .team-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    @media (max-width: 900px){ .team-grid{grid-template-columns:1fr;} }
+
+    .member{
+      border-radius: var(--r);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border:1px solid rgba(18,58,122,.14);
+      box-shadow: var(--shadow2);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      transition:.25s;
+      min-height: 170px;
+    }
+    .member:hover{ transform: translateY(-4px); border-color: rgba(30,136,229,.26); }
+
+    .avatar{
+      width:46px; height:46px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(30,136,229,1), rgba(15,188,214,1));
+      box-shadow: 0 12px 30px rgba(30,136,229,.18);
+      border:1px solid rgba(255,255,255,.35);
+      margin-bottom:12px;
+      position:relative;
+      overflow:hidden;
+    }
+    .avatar::after{
+      content:"";
+      position:absolute; inset:-20px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.45), transparent 60%);
+      transform: rotate(18deg);
+    }
+    .member h3{ color:#071a3d; font-size:16px; margin-bottom:6px; }
+    .role{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(30,136,229,.22);
+      background: rgba(30,136,229,.08);
+      color: rgba(36,74,134,.95);
+      font-size: 12px;
+      margin-bottom:10px;
+      width: fit-content;
+    }
+    .member p{
+      color: rgba(11,27,58,.86);
+      font-size: 13px;
+      line-height: 1.65;
     }
 
     /* FUN ZONE / MAZE */
     .fun{
       border-radius: 22px;
-      border:1px solid rgba(150,195,255,.16);
-      background: linear-gradient(180deg, rgba(11,42,90,.58), rgba(6,16,42,.42));
+      border:1px solid rgba(18,58,122,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.70), rgba(255,255,255,.55));
       box-shadow: var(--shadow2);
       padding:18px;
     }
@@ -373,7 +440,7 @@
       flex-wrap:wrap;
       margin-bottom:14px;
     }
-    .fun-head p{ color: rgba(184,208,255,.95); font-size: 13px; line-height:1.6; max-width: 70ch; }
+    .fun-head p{ color: rgba(36,74,134,.95); font-size: 13px; line-height:1.6; max-width: 70ch; }
     .controls{
       display:flex; align-items:center; gap:10px;
       flex-wrap:wrap;
@@ -384,8 +451,8 @@
       color: var(--txt);
     }
     select{
-      background: rgba(234,242,255,.06);
-      border:1px solid rgba(150,195,255,.2);
+      background: rgba(255,255,255,.75);
+      border:1px solid rgba(18,58,122,.16);
       border-radius: 12px;
       padding:10px 12px;
       outline:none;
@@ -405,20 +472,20 @@
       grid-template-columns: repeat(10, 1fr);
       border-radius: 18px;
       overflow:hidden;
-      border:1px solid rgba(150,195,255,.2);
-      background: rgba(6,16,42,.35);
-      box-shadow: 0 18px 45px rgba(0,0,0,.25);
+      border:1px solid rgba(18,58,122,.14);
+      background: rgba(255,255,255,.55);
+      box-shadow: 0 18px 45px rgba(8,25,60,.12);
       position:relative;
     }
     .cell{
       position:relative;
-      border:1px solid rgba(150,195,255,.04);
-      background: rgba(255,255,255,.02);
+      border:1px solid rgba(18,58,122,.05);
+      background: rgba(255,255,255,.22);
     }
     .wall{
-      background: rgba(66,165,245,.14);
-      border:1px solid rgba(66,165,245,.35);
-      box-shadow: inset 0 0 0 1px rgba(102,227,255,.06);
+      background: rgba(30,136,229,.14);
+      border:1px solid rgba(30,136,229,.24);
+      box-shadow: inset 0 0 0 1px rgba(15,188,214,.05);
     }
     .player, .goal{
       position:absolute;
@@ -433,9 +500,9 @@
       width: 58%;
       height: 58%;
       border-radius: 14px;
-      background: linear-gradient(135deg, rgba(102,227,255,1), rgba(66,165,245,1));
-      box-shadow: 0 0 18px rgba(102,227,255,.35);
-      border:1px solid rgba(255,255,255,.18);
+      background: linear-gradient(135deg, rgba(15,188,214,1), rgba(30,136,229,1));
+      box-shadow: 0 0 16px rgba(15,188,214,.26);
+      border:1px solid rgba(255,255,255,.35);
       transform: rotate(6deg);
     }
     .goal::before{
@@ -443,150 +510,135 @@
       width: 54%;
       height: 54%;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
-                  linear-gradient(135deg, rgba(30,136,229,1), rgba(102,227,255,1));
-      box-shadow: 0 0 18px rgba(66,165,245,.35);
-      border:1px solid rgba(255,255,255,.18);
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), transparent 55%),
+                  linear-gradient(135deg, rgba(30,136,229,1), rgba(15,188,214,1));
+      box-shadow: 0 0 16px rgba(30,136,229,.22);
+      border:1px solid rgba(255,255,255,.35);
     }
 
     .maze-side{
       border-radius: 18px;
       padding:16px;
-      border:1px solid rgba(150,195,255,.14);
-      background: rgba(6,16,42,.35);
+      border:1px solid rgba(18,58,122,.12);
+      background: rgba(255,255,255,.55);
+      box-shadow: 0 10px 26px rgba(8,25,60,.08);
     }
-    .maze-side h4{ font-size:16px; margin-bottom:8px; }
-    .maze-side p{ font-size:13px; color: rgba(234,242,255,.86); line-height:1.65; margin-bottom:12px; }
-    .kbd{
-      display:flex; gap:8px; flex-wrap:wrap; margin: 6px 0 12px;
-    }
-    .kbd span{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius: 10px;
-      border:1px solid rgba(150,195,255,.18);
-      background: rgba(234,242,255,.05);
-      color: rgba(234,242,255,.92);
-    }
-    .dpad{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:10px;
-      max-width: 220px;
-      margin-top:10px;
-    }
-    .dpad button{
-      padding:12px;
-      border-radius: 14px;
-      background: rgba(234,242,255,.06);
-      border:1px solid rgba(150,195,255,.2);
-      cursor:pointer;
-      transition:.2s;
-      font-weight:700;
-    }
-    .dpad button:hover{ background: rgba(66,165,245,.10); transform: translateY(-1px); }
-    .dpad .blank{ visibility:hidden; }
 
     .status{
       margin-top:12px;
       padding:12px 14px;
       border-radius: 16px;
-      border:1px solid rgba(150,195,255,.16);
-      background: rgba(11,42,90,.35);
+      border:1px solid rgba(18,58,122,.12);
+      background: rgba(255,255,255,.65);
       font-size: 13px;
       line-height:1.6;
-      color: rgba(234,242,255,.92);
+      color: rgba(11,27,58,.92);
     }
-    .status b{ color: var(--ok); }
+    .status b{ color: #0a7ea3; }
 
-    .mini-row{
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      margin-top:12px;
-    }
     .btn-small{
       padding:10px 12px;
       border-radius: 12px;
       background: linear-gradient(135deg, rgba(30,136,229,1), rgba(66,165,245,1));
-      border:1px solid rgba(102,227,255,.22);
+      border:1px solid rgba(15,188,214,.18);
       cursor:pointer;
       font-weight:800;
       transition:.2s;
+      color:#fff;
     }
-    .btn-small:hover{ transform: translateY(-1px); filter:brightness(1.05); }
 
-    /* CONTACT */
-    .contact{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:16px;
+    /* AD MODAL */
+    .modal-backdrop{
+      position:fixed; inset:0;
+      background: rgba(7,26,61,.30);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+      z-index: 2000;
     }
-    @media (max-width: 900px){ .contact{grid-template-columns:1fr;} }
-
-    .form{
-      border-radius: var(--r);
-      background: rgba(6,16,42,.35);
-      border:1px solid rgba(150,195,255,.14);
-      padding:18px;
+    .modal{
+      width: min(560px, 92vw);
+      border-radius: 22px;
+      background: rgba(255,255,255,.86);
+      border:1px solid rgba(18,58,122,.16);
+      box-shadow: 0 24px 70px rgba(8,25,60,.25);
+      overflow:hidden;
+      position:relative;
     }
-    .form label{
-      display:block;
-      font-size:12px;
-      color: rgba(184,208,255,.96);
-      margin: 10px 0 6px;
+    .modal-header{
+      padding:16px 18px;
+      background: linear-gradient(135deg, rgba(30,136,229,1), rgba(15,188,214,1));
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
     }
-    .form input, .form textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius: 14px;
-      border:1px solid rgba(150,195,255,.18);
-      background: rgba(234,242,255,.05);
-      outline:none;
-    }
-    .form textarea{ min-height: 110px; resize: vertical; }
-    .form .send{
-      margin-top:12px;
-      width:100%;
-      padding:12px;
-      border-radius: 14px;
-      border:1px solid rgba(102,227,255,.22);
-      background: linear-gradient(135deg, rgba(30,136,229,1), rgba(66,165,245,1));
-      cursor:pointer;
-      font-weight:800;
-      transition:.2s;
-    }
-    .form .send:hover{ filter: brightness(1.06); transform: translateY(-1px); }
-
-    footer{
-      padding: 26px 0 40px;
-      border-top:1px solid var(--line);
-      color: rgba(184,208,255,.92);
-      font-size: 12px;
-      line-height:1.65;
-    }
-    .footer-row{
-      display:flex; align-items:flex-start; justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    .footer-row b{ color: var(--accent); }
-    .toplink{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 10px;
+    .close{
+      appearance:none;
+      border:0;
+      background: rgba(255,255,255,.18);
+      color:#fff;
+      width:34px;
+      height:34px;
       border-radius: 12px;
-      border:1px solid rgba(150,195,255,.18);
-      background: rgba(234,242,255,.05);
+      cursor:pointer;
+      font-size:16px;
+      font-weight:800;
+      line-height:34px;
+      text-align:center;
     }
-
-    /* reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      *{transition:none !important}
-      html{scroll-behavior:auto}
+    .modal-body{ padding:18px; }
+    .modal-body p{
+      color: rgba(11,27,58,.88);
+      font-size: 13.5px;
+      line-height:1.7;
+      margin-bottom: 12px;
+    }
+    .modal-actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center; justify-content:flex-end;
+      padding: 0 18px 18px;
+    }
+    .modal-actions a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(18,58,122,.14);
+      background: rgba(255,255,255,.75);
+      font-weight:800;
+      font-size: 13px;
+      transition:.2s;
+    }
+    .modal-actions .primary{
+      background: linear-gradient(135deg, rgba(30,136,229,1), rgba(66,165,245,1));
+      border-color: rgba(15,188,214,.18);
+      color:#fff;
     }
   </style>
 </head>
-
 <body>
   <div class="bg-grid"></div>
+
+  <div class="modal-backdrop" id="adModal" role="dialog" aria-modal="true" aria-labelledby="adTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="adTitle">Sponsor Spotlight</h3>
+        <button class="close" id="adClose" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p><b>Follow The Fourth Dimension Through Facebook Now</b> — stay updated with their latest content, community posts, and announcements.</p>
+        <p style="font-size:12px;color:rgba(36,74,134,.92);">Tip: Replace the Facebook link below with your real page URL.</p>
+      </div>
+      <div class="modal-actions">
+        <a href="#" id="adLater" role="button">Maybe later</a>
+        <a class="primary" href="https://facebook.com" target="_blank" rel="noopener">Open Facebook</a>
+      </div>
+    </div>
+  </div>
 
   <div class="nav">
     <div class="container nav-inner">
@@ -599,6 +651,7 @@
         <a href="#programs">Programs</a>
         <a href="#events">Events</a>
         <a href="#incubation">Incubation</a>
+        <a href="#team">Team</a>
         <a href="#fun">Fun Zone</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -606,12 +659,11 @@
   </div>
 
   <main id="top">
-    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="kicker"><span class="dot"></span> Non-profit • Youth Empowerment • Ages 13–18</div>
-          <h1>Empowering youth to <span style="color:var(--ok)">lead</span>, <span style="color:var(--accent)">build</span>, and <span style="color:var(--ok)">create change</span>.</h1>
+          <h1>Empowering youth to <span style="color:#0a7ea3">lead</span>, <span style="color:var(--accent)">build</span>, and <span style="color:#0a7ea3">create change</span>.</h1>
           <p class="sub">
             Adapt is a youth-focused non-profit empowering ages 13–18 through <b>Civil Engagement</b>, <b>STEAM</b>,
             <b>Freelancing</b>, and <b>Entrepreneurship</b>. We host sessions and events—and incubate startups built by young people.
@@ -619,41 +671,26 @@
           <div class="cta-row">
             <a class="btn btn-primary" href="#contact">Join Us</a>
             <a class="btn btn-ghost" href="#contact">Partner With Us</a>
-            <a class="btn btn-ghost" href="#fun">Try the Maze</a>
+            <a class="btn btn-ghost" href="#team">Meet the Team</a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Quick facts">
-          <h3 style="font-size:16px; color:#fff; margin-bottom:10px;">At a glance</h3>
-          <p style="font-size:13px; color:rgba(234,242,255,.86); line-height:1.7;">
+        <aside class="hero-card">
+          <h3 style="font-size:16px; color:#071a3d; margin-bottom:10px;">At a glance</h3>
+          <p style="font-size:13px; color:rgba(11,27,58,.86); line-height:1.7;">
             We create structured pathways for youth to learn, collaborate, and ship real projects—from community impact to startups.
           </p>
-          <div class="stats" role="list">
-            <div class="stat" role="listitem">
-              <b>13–18</b>
-              <span>Target age group</span>
-            </div>
-            <div class="stat" role="listitem">
-              <b>4 Tracks</b>
-              <span>Civil Engagement • STEAM • Freelancing • Entrepreneurship</span>
-            </div>
-            <div class="stat" role="listitem">
-              <b>Sessions</b>
-              <span>Workshops, mentorship, and community building</span>
-            </div>
-            <div class="stat" role="listitem">
-              <b>Incubation</b>
-              <span>Support for youth-built startups</span>
-            </div>
+          <div class="stats">
+            <div class="stat"><b>13–18</b><span>Target age group</span></div>
+            <div class="stat"><b>4 Tracks</b><span>Civil Engagement • STEAM • Freelancing • Entrepreneurship</span></div>
+            <div class="stat"><b>Sessions</b><span>Workshops, mentorship, and community building</span></div>
+            <div class="stat"><b>Incubation</b><span>Support for youth-built startups</span></div>
           </div>
-          <p class="small-note">
-            <b style="color:var(--accent)">Fiscally sponsored</b> by <b>The Hack Foundation</b>.
-          </p>
+          <p class="small-note"><b style="color:var(--accent)">Fiscally sponsored</b> by <b>The Hack Foundation</b>.</p>
         </aside>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <div class="container">
         <div class="section-title">
@@ -664,384 +701,80 @@
         <div class="grid">
           <div class="card">
             <h3>Who We Are</h3>
-            <p>
-              Adapt is a youth-led, youth-focused non-profit supporting teens with opportunities to learn, build, and lead—together.
-            </p>
+            <p>Adapt is a youth-led, youth-focused non-profit supporting teens with opportunities to learn, build, and lead—together.</p>
             <div class="pill">Community-first</div>
           </div>
 
           <div class="card">
             <h3>Our Mission</h3>
-            <p>
-              Empower youth aged 13–18 through Civil Engagement, STEAM, Freelancing, and Entrepreneurship—turning curiosity into action.
-            </p>
+            <p>Empower youth aged 13–18 through Civil Engagement, STEAM, Freelancing, and Entrepreneurship—turning curiosity into action.</p>
             <div class="pill">Impact-driven</div>
           </div>
 
           <div class="card">
             <h3>Fiscally Sponsored</h3>
-            <p>
-              Adapt is fiscally sponsored by <b>The Hack Foundation</b>, helping provide a trusted operational umbrella while we focus on mission and programs.
-            </p>
+            <p>Adapt is fiscally sponsored by <b>The Hack Foundation</b>, helping provide a trusted operational umbrella while we focus on mission and programs.</p>
             <div class="pill">Transparency</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROGRAMS -->
-    <section id="programs">
+    <section id="team">
       <div class="container">
         <div class="section-title">
-          <h2>Programs</h2>
-          <p>Four core tracks that build confidence, capability, and a portfolio of real projects.</p>
+          <h2>Team</h2>
+          <p>Meet the people building Adapt—focused on empowering youth, shipping programs, and scaling impact.</p>
         </div>
 
-        <div class="grid">
-          <div class="card">
-            <h3>Civil Engagement</h3>
-            <p>Leadership, civic participation, and community initiatives that help youth create tangible local impact.</p>
+        <div class="team-grid">
+          <div class="member">
+            <div class="avatar"></div>
+            <h3>Ahmed Farouk</h3>
+            <div class="role">Founder &amp; CEO</div>
+            <p>Leads Adapt’s vision, strategy, and partnerships—driving youth programs, events, and incubation.</p>
           </div>
-          <div class="card">
-            <h3>STEAM</h3>
-            <p>Hands-on learning across Science, Technology, Engineering, Arts, and Math—projects you can demo and share.</p>
+
+          <div class="member">
+            <div class="avatar"></div>
+            <h3>Shams</h3>
+            <div class="role">Co-founder</div>
+            <p>Supports core operations and community growth—helping teams run sessions and build strong member experiences.</p>
           </div>
-          <div class="card">
-            <h3>Freelancing</h3>
-            <p>Practical skills for real work: communication, deliverables, pricing basics, and building a credible portfolio.</p>
-          </div>
-          <div class="card">
-            <h3>Entrepreneurship</h3>
-            <p>From idea to execution: validation, planning, pitching, and building early prototypes with mentorship support.</p>
+
+          <div class="member">
+            <div class="avatar"></div>
+            <h3>Hanin Ehab</h3>
+            <div class="role">Head of PM Committee</div>
+            <p>Ensures programs run smoothly with planning, timelines, and execution—turning ideas into structured deliverables.</p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- EVENTS -->
-    <section id="events">
-      <div class="container">
-        <div class="section-title">
-          <h2>Events & Sessions</h2>
-          <p>Simple, structured experiences—designed for beginners, builders, and future founders.</p>
-        </div>
-
-        <div class="timeline" role="list">
-          <div class="item" role="listitem">
-            <div class="top">
-              <h4>Weekly Sessions</h4>
-              <span class="tag">Skill-building</span>
-            </div>
-            <p>Short workshops with practice time: learn → build → share. Friendly for first-timers.</p>
-          </div>
-
-          <div class="item" role="listitem">
-            <div class="top">
-              <h4>Project Showcases</h4>
-              <span class="tag">Community</span>
-            </div>
-            <p>Members present progress, get feedback, and learn from peers—like a mini demo day.</p>
-          </div>
-
-          <div class="item" role="listitem">
-            <div class="top">
-              <h4>Intensive Events</h4>
-              <span class="tag">Hands-on</span>
-            </div>
-            <p>Full-day (or weekend) build sprints focused on shipping something real and presentable.</p>
-          </div>
-
-          <div class="item" role="listitem">
-            <div class="top">
-              <h4>Mentorship Hours</h4>
-              <span class="tag">Support</span>
-            </div>
-            <p>Guidance for teams: project planning, clarity, next steps, and how to move forward faster.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INCUBATION -->
-    <section id="incubation">
-      <div class="container">
-        <div class="section-title">
-          <h2>Incubation</h2>
-          <p>We incubate startups built by young people—helping teams move from idea to early traction.</p>
-        </div>
-
-        <div class="two-col">
-          <div class="card" style="min-height:auto;">
-            <h3>Youth Startup Support</h3>
-            <p>
-              Adapt supports young founders with a clear path: validate, build, and pitch. The goal is not just “a cool idea”—
-              it’s an executable project with real learning, teamwork, and momentum.
-            </p>
-            <div class="pill">Founder mindset</div>
-          </div>
-
-          <ul class="bullets" aria-label="Incubation pillars">
-            <li>Project structure: milestones, roles, and weekly checkpoints.</li>
-            <li>Mentorship: guidance on validation, prototypes, and pitching.</li>
-            <li>Community: peer feedback, demos, and founder-to-founder support.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- FUN ZONE -->
-    <section id="fun">
-      <div class="container">
-        <div class="section-title">
-          <h2>Fun Zone</h2>
-          <p>A tiny maze game—because learning + building should be fun.</p>
-        </div>
-
-        <div class="fun">
-          <div class="fun-head">
-            <div>
-              <h3 style="font-size:18px; margin-bottom:6px; color:#fff;">Mini Maze</h3>
-              <p>
-                Use arrow keys (desktop) or the on-screen pad (mobile). Reach the goal circle.
-                Choose a difficulty and hit <b>Play Again</b> any time.
-              </p>
-            </div>
-            <div class="controls">
-              <label for="difficulty" style="font-size:12px; color:rgba(184,208,255,.95);">Difficulty</label>
-              <select id="difficulty" aria-label="Maze difficulty">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-              </select>
-              <button class="btn-small" id="resetBtn" type="button">Play Again</button>
-            </div>
-          </div>
-
-          <div class="maze-wrap">
-            <div>
-              <div id="maze" class="maze" aria-label="Maze grid"></div>
-              <div id="status" class="status" role="status" aria-live="polite">
-                Move the player to the goal. <b>Good luck!</b>
-              </div>
-            </div>
-
-            <div class="maze-side">
-              <h4>Controls</h4>
-              <p>Desktop: Arrow keys. Mobile: tap the pad.</p>
-              <div class="kbd" aria-hidden="true">
-                <span>↑</span><span>↓</span><span>←</span><span>→</span>
-              </div>
-
-              <div class="dpad" aria-label="On-screen controls">
-                <button class="blank" type="button">.</button>
-                <button type="button" data-move="up" aria-label="Move up">↑</button>
-                <button class="blank" type="button">.</button>
-
-                <button type="button" data-move="left" aria-label="Move left">←</button>
-                <button type="button" data-move="down" aria-label="Move down">↓</button>
-                <button type="button" data-move="right" aria-label="Move right">→</button>
-              </div>
-
-              <div class="mini-row">
-                <span class="tag">Player starts top-left</span>
-                <span class="tag">Goal is bottom-right</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Get Involved</h2>
-          <p>Want to join, volunteer, sponsor, or collaborate? Send a message—this is a frontend-only form layout.</p>
-        </div>
-
-        <div class="contact">
-          <div class="card" style="min-height:auto;">
-            <h3>Join as a Member</h3>
-            <p>Be part of a youth community that learns, builds projects, and creates real impact—step by step.</p>
-            <div class="pill">Ages 13–18</div>
-            <div style="height:10px"></div>
-            <h3>Partner with Adapt</h3>
-            <p>Organizations, mentors, and supporters can help us expand sessions, events, and incubation opportunities.</p>
-            <div class="pill">Partnerships</div>
-          </div>
-
-          <form class="form" onsubmit="event.preventDefault(); alert('Thanks! This demo form has no backend.');">
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name" required />
-
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="you@example.com" required />
-
-            <label for="msg">Message</label>
-            <textarea id="msg" placeholder="How would you like to get involved?" required></textarea>
-
-            <button class="send" type="submit">Send Message</button>
-            <p style="margin-top:10px; font-size:12px; color:rgba(184,208,255,.9); line-height:1.55;">
-              Note: Adapt is fiscally sponsored by <b>The Hack Foundation</b>.
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container footer-row">
-        <div>
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-            <span class="brand-badge" aria-hidden="true" style="width:30px;height:30px;border-radius:12px;"></span>
-            <b>Adapt</b>
-          </div>
-          <div>
-            © <span id="year"></span> Adapt. Empowering youth aged 13–18 through Civil Engagement, STEAM, Freelancing, and Entrepreneurship.
-          </div>
-          <div>
-            Fiscally sponsored by <b>The Hack Foundation</b>.
-          </div>
-        </div>
-
-        <a class="toplink" href="#top" aria-label="Back to top">↑ Back to top</a>
-      </div>
-    </footer>
   </main>
 
   <script>
-    // --- MAZE GAME (10x10) ---
-    const mazeEl = document.getElementById('maze');
-    const statusEl = document.getElementById('status');
-    const diffEl = document.getElementById('difficulty');
-    const resetBtn = document.getElementById('resetBtn');
-    const yearEl = document.getElementById('year');
-    yearEl.textContent = new Date().getFullYear();
+    // --- AD POPUP ---
+    const adModal = document.getElementById('adModal');
+    const adClose = document.getElementById('adClose');
+    const adLater = document.getElementById('adLater');
 
-    // 0 = path, 1 = wall
-    const MAZES = {
-      easy: [
-        [0,0,0,1,0,0,0,0,0,0],
-        [1,1,0,1,0,1,1,1,1,0],
-        [0,0,0,0,0,0,0,0,1,0],
-        [0,1,1,1,1,1,0,0,1,0],
-        [0,0,0,0,0,1,0,1,1,0],
-        [0,1,1,1,0,1,0,0,0,0],
-        [0,0,0,1,0,0,0,1,1,0],
-        [0,1,0,1,1,1,0,0,1,0],
-        [0,1,0,0,0,0,0,1,0,0],
-        [0,1,1,1,1,1,0,0,0,0]
-      ],
-      medium: [
-        [0,1,0,0,0,1,0,0,0,0],
-        [0,1,0,1,0,1,0,1,1,0],
-        [0,0,0,1,0,0,0,0,1,0],
-        [1,1,0,1,1,1,1,0,1,0],
-        [0,0,0,0,0,0,1,0,0,0],
-        [0,1,1,1,1,0,1,1,1,0],
-        [0,0,0,0,1,0,0,0,1,0],
-        [0,1,1,0,1,1,1,0,1,0],
-        [0,1,0,0,0,0,0,0,1,0],
-        [0,0,0,1,1,1,1,0,0,0]
-      ]
-    };
+    function openAd(){
+      adModal.style.display = 'flex';
+      setTimeout(()=> adClose.focus(), 0);
+    }
+    function closeAd(){ adModal.style.display = 'none'; }
 
-    let grid = MAZES.easy;
-    let player = { r: 0, c: 0 };
-    const goal = { r: 9, c: 9 };
-    let won = false;
-
-    function isWalkable(r,c){
-      return r>=0 && r<10 && c>=0 && c<10 && grid[r][c] === 0;
+    const adKey = 'adaptSponsorAdSeen';
+    if(!sessionStorage.getItem(adKey)){
+      sessionStorage.setItem(adKey, '1');
+      setTimeout(openAd, 1200);
     }
 
-    function setStatus(msg, highlight=false){
-      statusEl.innerHTML = highlight ? msg : msg;
-    }
-
-    function render(){
-      mazeEl.innerHTML = '';
-      for(let r=0;r<10;r++){
-        for(let c=0;c<10;c++){
-          const cell = document.createElement('div');
-          cell.className = 'cell' + (grid[r][c] ? ' wall' : '');
-          // player overlay
-          if(r === player.r && c === player.c){
-            const p = document.createElement('div');
-            p.className = 'player';
-            cell.appendChild(p);
-          }
-          // goal overlay
-          if(r === goal.r && c === goal.c){
-            const g = document.createElement('div');
-            g.className = 'goal';
-            cell.appendChild(g);
-          }
-          mazeEl.appendChild(cell);
-        }
-      }
-    }
-
-    function checkWin(){
-      if(player.r === goal.r && player.c === goal.c){
-        won = true;
-        setStatus('✅ You made it! <b>Nice work</b>. Hit <b>Play Again</b> or change difficulty.', true);
-      }
-    }
-
-    function move(dir){
-      if(won) return;
-
-      let nr = player.r, nc = player.c;
-      if(dir === 'up') nr--;
-      if(dir === 'down') nr++;
-      if(dir === 'left') nc--;
-      if(dir === 'right') nc++;
-
-      if(isWalkable(nr,nc)){
-        player = { r:nr, c:nc };
-        render();
-        checkWin();
-      } else {
-        // small feedback (no shaking to respect reduced motion)
-        setStatus('⛔ Wall! Try a different path. <b>Keep going</b>.', true);
-      }
-    }
-
-    function reset(){
-      grid = MAZES[diffEl.value] || MAZES.easy;
-      player = { r:0, c:0 };
-      won = false;
-      setStatus('Move the player to the goal. <b>Good luck!</b>', true);
-      render();
-    }
-
-    // Keyboard
-    window.addEventListener('keydown', (e)=>{
-      const k = e.key;
-      if(k === 'ArrowUp') { e.preventDefault(); move('up'); }
-      if(k === 'ArrowDown') { e.preventDefault(); move('down'); }
-      if(k === 'ArrowLeft') { e.preventDefault(); move('left'); }
-      if(k === 'ArrowRight') { e.preventDefault(); move('right'); }
-    });
-
-    // On-screen buttons
-    document.querySelectorAll('[data-move]').forEach(btn=>{
-      btn.addEventListener('click', ()=> move(btn.dataset.move));
-    });
-
-    diffEl.addEventListener('change', reset);
-    resetBtn.addEventListener('click', reset);
-
-    // init
-    // Ensure start and goal are walkable (safety)
-    if(MAZES.easy[0][0] !== 0) MAZES.easy[0][0] = 0;
-    if(MAZES.easy[9][9] !== 0) MAZES.easy[9][9] = 0;
-    if(MAZES.medium[0][0] !== 0) MAZES.medium[0][0] = 0;
-    if(MAZES.medium[9][9] !== 0) MAZES.medium[9][9] = 0;
-
-    reset();
+    adClose.addEventListener('click', closeAd);
+    adLater.addEventListener('click', (e)=>{ e.preventDefault(); closeAd(); });
+    adModal.addEventListener('click', (e)=>{ if(e.target === adModal) closeAd(); });
+    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && adModal.style.display === 'flex') closeAd(); });
   </script>
 </body>
 </html>
